@@ -22,12 +22,16 @@ At the time of writing this, the URL is not usable with the provided app hosted 
 
    I decided to try something I never used before, which is the serverless service of GCP "Cloud run".
    
-   It cost me a few more hours to set up the dockerfile, the gcp project, and really understanding what I was doing.
+   It costs me a few more hours to set up the dockerfile, the gcp project, and to understand what I was doing with it and why.
    
    
 # What's next
 
-   If I had to spend more time on the project, I would start by fixing limits 1 and 3 in order to make it more resilient. Then I would rewrite part of the code, like in the `Board` class where I recreate a new board for every possible move/bridge removal in order to find the best actions. It quite costly in terms of time/computation.
+   If I had to spend more time on the project, I would start by fixing limits 1 and 3 in order to make it more resilient.
+   Then I would rewrite part of the code, like in the `Board` class where I recreate a new board for every possible move/bridge removal in order to find the best actions.
+   It is quite costly in terms of time/ressources.
+   Then I would spend some time finding a better definition of a "good" move, and maybe trying to compute a few moves ahead.
+   I could also try to add a bit of "randomness" to prevent the always determinist choice. wether with a random in the final choice or by using something like a genetic algorithm
 
 # Thank you
 
