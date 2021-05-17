@@ -4,8 +4,13 @@
 ### usage
 the AI is accessible via a Post to https://pontuai-qy3fcdg7ya-ew.a.run.app/ai
 
-At the time of writing this, the URL is not usable with the provided app hosted on Heroku due to CORS issues.
-  
+Can also be build locally via the Dockerfile
+
+```
+    docker build -f Dockerfile . 
+    docker run -e PORT=8080 {docker image}
+```
+
 # Limitations
    three points seems importants to me concerning this project
    1. 0 tests. I am not expecting to maintain this project, so I'm losing the single most important reason to test a project.
