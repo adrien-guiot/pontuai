@@ -77,6 +77,8 @@ class Board:
     def findBestMove(self):
         playersMoves = self.listPlayersMoves()
         movesScores = {}
+        if len(playersMoves) == 0:
+            return None
         for move in playersMoves[0]:
             newpawns = self.pawns[0].copy()
             newpawns.remove([move[0], move[1]])
@@ -85,6 +87,8 @@ class Board:
             newMoves = newBoard.listPlayersMoves()
             score = len(newMoves[0]) + (12 - len(newMoves[1]))
             movesScores[move] = score
+        if len(movesScores) == 0:
+             return None
         return max(movesScores, key=movesScores.get)
 
     def removeBestBridge(self):
